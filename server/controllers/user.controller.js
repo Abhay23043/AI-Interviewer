@@ -5,7 +5,10 @@ import paymentModel from "../model/payment.model.js"
 
 export const getCurrentUser = async (req,res) =>{
     const userId = req.userId
-    const user = await googleUserModel.findById(userId) || await userModel.findById(userId)
+    let user = await userModel.findById(userId)
+    if (!user) {
+        user = await googleUserModel.findById(userId)
+    }
     if(!user){
         return res.status(404).json({
             message:"User does not found."

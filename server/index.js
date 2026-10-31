@@ -11,6 +11,9 @@ const allowedOrigins = [
     "http://localhost:5173",
     "https://ai-interviewer.abhayjaiswal457.workers.dev"
 ];
+if (process.env.FRONTEND_URI) {
+    allowedOrigins.push(process.env.FRONTEND_URI);
+}
 
 app.use(cors({
     origin: function (origin, callback) {

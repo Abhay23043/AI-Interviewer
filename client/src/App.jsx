@@ -27,13 +27,21 @@ const App = () => {
         return
       }
       try {
-        const result = await axios.get(`${ServerUrl}/api/user/getMe`);
+        const result = await axios.get(`${ServerUrl}/api/user/getMe`, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
         dispatch(setUserData(result.data))
       } catch (error) {
         console.log(error.message)
-        localStorage.removeItem("token")
-        delete axios.defaults.headers.common.Authorization
-        dispatch(setUserData(null))
+        const status = error.response?.status
+        if (status === 401 || status === 404) {
+          localStorage.removeItem("token")
+          localStorage.removeItem("user")
+          delete axios.defaults.headers.common.Authorization
+          dispatch(setUserData(null))
+        }
       }
     }
     getUser()
