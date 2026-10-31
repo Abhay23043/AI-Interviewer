@@ -1,0 +1,465 @@
+.register-page {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	padding: 32px 20px;
+	box-sizing: border-box;
+	background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790486031/background_login.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: Arial, sans-serif;
+}
+
+.register-card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: min(920px, 100%);
+	min-height: 520px;
+	overflow: hidden;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 18px 60px rgba(39, 29, 117, 0.2);
+}
+
+.register-art {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	padding: 23px 30px;
+	color: #fff;
+	background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790482413/ChatGPT_Image_Sep_27_2026_09_39_16_AM.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.register-art-shade {
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: linear-gradient(145deg, rgba(38, 23, 135, 0.72), rgba(38, 23, 135, 0.25) 58%, rgba(20, 20, 94, 0.3));
+}
+
+.register-brand {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	min-width: 0;
+}
+
+.register-brand-icon {
+	display: grid;
+	flex: 0 0 29px;
+	width: 29px;
+	height: 29px;
+	place-items: center;
+	border-radius: 6px;
+	color: #fff;
+	background: linear-gradient(140deg, #8e6aff, #5545f0);
+}
+
+.register-brand>span:last-child {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.register-brand strong {
+	font-size: 13px;
+	line-height: 1.1;
+	font-weight: 700;
+}
+
+.register-brand strong span {
+	color: #8273ff;
+}
+
+.register-brand small {
+	font-size: 8px;
+	line-height: 1.2;
+}
+
+.register-brand-light small {
+	color: rgba(255, 255, 255, 0.72);
+}
+
+.register-brand-light strong span {
+	color: #aaa0ff;
+}
+
+.register-art-copy {
+	position: relative;
+	z-index: 1;
+	max-width: 290px;
+	margin-top: 20px;
+}
+
+.register-art-copy h1 {
+	margin: 0 0 8px;
+	font-size: 24px;
+	line-height: 1.04;
+	font-weight: 750;
+}
+
+.register-art-copy h1 span {
+	color: #aaa0ff;
+}
+
+.register-art-copy p {
+	max-width: 255px;
+	margin: 0;
+	color: rgba(255, 255, 255, 0.78);
+	font-size: 10px;
+	line-height: 1.55;
+}
+
+.register-features {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	gap: 10px;
+	width: 245px;
+	margin-top: 20px;
+}
+
+.register-feature {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	min-width: 0;
+}
+
+.register-feature-icon {
+	display: grid;
+	flex: 0 0 31px;
+	width: 31px;
+	height: 31px;
+	place-items: center;
+	border-radius: 6px;
+	color: #fff;
+	background: rgba(111, 82, 248, 0.75);
+}
+
+.register-feature>span:last-child {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.register-feature strong {
+	font-size: 10px;
+	line-height: 1.2;
+}
+
+.register-feature small {
+	color: rgba(255, 255, 255, 0.68);
+	font-size: 8px;
+	line-height: 1.2;
+}
+
+.register-robot {
+	position: absolute;
+	z-index: 0;
+	right: -3px;
+	bottom: 20px;
+	width: 150px;
+	height: 164px;
+	background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790482991/ChatGPT_Image_Sep_27_2026_09_50_59_AM.png);
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.register-form-panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 0;
+	padding: 28px 34px 22px;
+	color: #202235;
+	background: #fff;
+}
+
+.register-brand-dark {
+	margin-bottom: 18px;
+}
+
+.register-brand-dark small {
+	color: #73768a;
+}
+
+.register-heading {
+	margin-bottom: 16px;
+}
+
+.register-heading h2 {
+	margin: 0 0 4px;
+	font-size: 19px;
+	line-height: 1.25;
+	font-weight: 700;
+}
+
+.register-heading p {
+	margin: 0;
+	color: #73768a;
+	font-size: 10px;
+}
+
+.register-form {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 9px 10px;
+}
+
+.register-field {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-width: 0;
+	height: 37px;
+	box-sizing: border-box;
+	border: 1px solid #e2e3ec;
+	border-radius: 6px;
+	color: #85899b;
+	background: #fff;
+	transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.register-field:focus-within {
+	border-color: #7563ef;
+	box-shadow: 0 0 0 3px rgba(117, 99, 239, 0.1);
+}
+
+.register-field>svg {
+	flex: 0 0 auto;
+	margin-left: 11px;
+	font-size: 13px;
+}
+
+.register-field input {
+	width: 100%;
+	min-width: 0;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0 9px;
+	border: 0;
+	outline: 0;
+	color: #25283a;
+	background: transparent;
+	font: inherit;
+	font-size: 10px;
+}
+
+.register-field input::placeholder {
+	color: #85899b;
+	opacity: 1;
+}
+
+.register-field-password,
+.register-field-confirm {
+	grid-column: 1 / -1;
+}
+
+.register-visibility {
+	display: grid;
+	flex: 0 0 34px;
+	height: 100%;
+	place-items: center;
+	border: 0;
+	color: #85899b;
+	background: transparent;
+	cursor: pointer;
+}
+
+.register-visibility svg {
+	font-size: 13px;
+}
+
+.register-terms {
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: flex-start;
+	gap: 6px;
+	margin-top: 1px;
+	color: #303247;
+	font-size: 9px;
+	line-height: 1.5;
+}
+
+.register-terms input {
+	flex: 0 0 auto;
+	width: 12px;
+	height: 12px;
+	margin: 1px 0 0;
+	accent-color: #6954ef;
+}
+
+.register-terms a,
+.register-login a {
+	color: #5e50dd;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.register-terms a:hover,
+.register-login a:hover {
+	text-decoration: underline;
+}
+
+.register-error {
+	grid-column: 1 / -1;
+	margin: 0;
+	color: #b42318;
+	font-size: 10px;
+	line-height: 1.4;
+}
+
+.register-submit {
+	position: relative;
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 37px;
+	padding: 0 38px;
+	border: 0;
+	border-radius: 6px;
+	color: #fff;
+	background: linear-gradient(105deg, #7953ed, #5448ed);
+	box-shadow: 0 5px 12px rgba(92, 75, 226, 0.18);
+	font: inherit;
+	font-size: 10px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: filter 160ms ease, transform 160ms ease;
+}
+
+.register-loading {
+
+
+	img {
+		width: 20px;
+		height: 20px;
+		filter: brightness(0) invert(1);
+	}
+}
+
+.register-submit:hover:not(:disabled) {
+	filter: brightness(1.06);
+	transform: translateY(-1px);
+}
+
+.register-submit:disabled {
+	cursor: wait;
+	opacity: 0.72;
+}
+
+.register-submit svg {
+	position: absolute;
+	right: 14px;
+	font-size: 12px;
+}
+
+.register-divider {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 13px 0 10px;
+	color: #85899b;
+	font-size: 9px;
+	white-space: nowrap;
+}
+
+.register-divider::before,
+.register-divider::after {
+	height: 1px;
+	flex: 1;
+	background: #e7e8ee;
+	content: '';
+}
+
+.register-socials {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 9px;
+}
+
+.register-socials button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	min-width: 0;
+	min-height: 34px;
+	padding: 0 7px;
+	border: 1px solid #e2e3ec;
+	border-radius: 6px;
+	color: #303247;
+	background: #fff;
+	font: inherit;
+	font-size: 9px;
+	white-space: nowrap;
+}
+
+.register-socials button:not(:disabled) {
+	cursor: pointer;
+}
+
+.register-socials button:not(:disabled):hover {
+	background: #f8f8fc;
+}
+
+.register-socials button:disabled {
+	color: #85899b;
+	background: #fafafe;
+	cursor: not-allowed;
+}
+
+.register-login {
+	margin: 14px 0 0;
+	color: #73768a;
+	font-size: 10px;
+	text-align: center;
+}
+
+@media (max-width: 720px) {
+	.register-card {
+		grid-template-columns: 1fr;
+		width: min(460px, 100%);
+		min-height: 0;
+	}
+
+	.register-art {
+		display: none;
+	}
+
+	.register-form-panel {
+		padding: 30px clamp(22px, 7vw, 38px) 25px;
+	}
+}
+
+@media (max-width: 390px) {
+	.register-page {
+		padding: 16px 12px;
+	}
+
+	.register-form-panel {
+		padding: 24px 18px 22px;
+	}
+
+	.register-form {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.register-field-name,
+	.register-field-email {
+		grid-column: 1 / -1;
+	}
+
+	.register-socials {
+		grid-template-columns: 1fr;
+	}
+}

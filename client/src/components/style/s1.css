@@ -1,0 +1,536 @@
+.s1body1 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #eef0f0, #d7deff);
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.area {
+    width: 100%;
+    max-width: 1152px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.222);
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   LEFT AREA
+========================= */
+
+.leftarea {
+    position: relative;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    background: linear-gradient(to left,
+            #def8e5,
+            #d5f8e0);
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.s1h2 {
+    font-weight: 700;
+    color: rgb(8, 8, 8);
+}
+
+h2 {
+    color: rgb(8, 8, 8);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.s1icon {
+    color: rgb(8, 186, 8);
+    font-size: 18px;
+}
+
+
+/* =========================
+   LIST AREA
+========================= */
+
+.downarea {
+    margin-top: 15px;
+}
+
+.downarea>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* =========================
+   LIST ITEM
+========================= */
+
+.s1listdata {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: white;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+
+    padding: 10px;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.222);
+}
+
+.s1span {
+    color: rgb(12, 12, 12);
+    font-size: small;
+}
+
+
+/* =========================
+   RIGHT AREA
+========================= */
+
+.rightarea {
+    width: 50%;
+    padding: 40px;
+    background-color: white;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+
+/* =========================
+   INPUT CONTAINER
+========================= */
+
+.s1parinp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   INPUT WRAPPER
+========================= */
+
+.s1inp {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   USER ICON
+========================= */
+
+.s1usericon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+
+    transform: translateY(-50%);
+
+    color: rgb(174, 172, 172);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.s1input {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    padding-left: 40px;
+    padding-right: 48px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    border: 1px solid #b6b8b6;
+    border-radius: 8px;
+
+    color: rgb(90, 89, 89);
+
+    background-color: white;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+/* INPUT FOCUS */
+
+.s1input:focus {
+    border: 2px solid rgb(3, 254, 3);
+    outline: none;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.s1select {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    border: 1px solid #b6b8b6;
+    border-radius: 8px;
+
+    background-color: white;
+
+    outline: none;
+}
+
+
+/* SELECT FOCUS */
+
+.s1select:focus {
+    border: 2px solid rgb(3, 254, 3);
+    outline: none;
+}
+
+
+/* =========================
+   UPLOAD AREA
+========================= */
+
+.s1upload {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 2px dashed #b6b8b6;
+
+    color: #b6b8b6;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+
+/* Upload text */
+
+.s1upload p {
+    color: rgb(97, 97, 97);
+}
+
+
+/* Upload hover */
+
+.s1upload:hover {
+    color: rgb(15, 237, 15);
+    background-color: rgb(247, 255, 247);
+    border: 2px dashed #09c209;
+}
+
+
+/* =========================
+   UPLOAD ICON
+========================= */
+
+.uploadIcon {
+    color: rgb(4, 174, 4);
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    visibility: hidden;
+}
+
+
+/* =========================
+   SMALL BUTTON
+========================= */
+
+.s1btn {
+    margin-top: 5px;
+
+    background: rgb(55, 55, 55);
+    color: whitesmoke;
+
+    padding-inline: 10px;
+    padding-block: 4px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: 0.2s ease;
+}
+
+.s1btn:hover {
+    background: rgb(67, 67, 67);
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.s1subbtn {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding-block: 12px;
+
+    border-radius: 24px;
+    border: none;
+
+    background-color: rgb(74, 84, 100);
+
+    color: white;
+
+    font-size: medium;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.s1subbtn:hover {
+    background-color: rgb(72, 81, 97);
+}
+
+
+/* =========================
+   GREEN SUBMIT BUTTON
+========================= */
+
+.s1subbtn2 {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding-block: 12px;
+
+    border-radius: 24px;
+    border: none;
+
+    background-color: rgb(14, 222, 66);
+
+    color: white;
+
+    font-size: medium;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.s1subbtn2:hover {
+    background-color: rgb(7, 161, 17);
+}
+
+
+/* =========================
+   SKILL PROGRESS
+========================= */
+
+.s1skillpro {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: rgb(233, 233, 233);
+
+    border: 1px solid rgb(208, 207, 207);
+
+    border-radius: 12px;
+
+    padding: 12px;
+}
+
+
+/* Skill heading */
+
+.s1skillpro h3 {
+    color: #212020;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SKILL DATA
+========================= */
+
+.s1projectsdata {
+    font-size: medium;
+    color: #212020;
+    margin-bottom: 1px;
+}
+
+.s1skillsdata {
+    font-size: medium;
+    color: #212020;
+    margin-bottom: 1px;
+}
+
+
+/* =========================
+   DATA SECTION
+========================= */
+
+.s1data-0 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* List */
+
+.s1data-0 ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #5a5a5a;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 8px 0 0 0;
+    font-size: small;
+
+
+}
+
+
+.skilldata-1 {
+    color: rgb(8, 165, 8);
+    background-color: rgb(218, 252, 230);
+    border-radius: 24px;
+    padding-inline: 5px;
+    padding-block: 1px;
+    margin-left: 10px;
+    font-size: small;
+}
+
+
+/* =========================
+   RESPONSIVE 
+========================= */
+
+@media (max-width: 900px) {
+
+    .area {
+        max-width: 95%;
+    }
+
+    .leftarea,
+    .rightarea {
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .area {
+        flex-direction: column;
+        max-width: 95%;
+    }
+
+    .leftarea,
+    .rightarea {
+        width: 100%;
+    }
+
+    .leftarea {
+        padding: 30px;
+    }
+
+    .rightarea {
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .s1body1 {
+        padding: 15px 0;
+    }
+
+    .area {
+        max-width: 94%;
+        border-radius: 18px;
+    }
+
+    .leftarea,
+    .rightarea {
+        padding: 22px;
+    }
+
+    .s1input {
+        font-size: 14px;
+    }
+
+    .s1upload {
+        padding: 25px 15px;
+    }
+}

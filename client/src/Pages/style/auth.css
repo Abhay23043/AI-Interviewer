@@ -1,0 +1,344 @@
+.auth-screen {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790486031/background_login.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+.auth-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: min(920px, 100%);
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 18px 60px rgba(39, 29, 117, 0.2);
+}
+
+.auth-art {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 23px 30px;
+    color: #fff;
+    background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790482413/ChatGPT_Image_Sep_27_2026_09_39_16_AM.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-art-shade {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(38, 23, 135, 0.72), rgba(38, 23, 135, 0.25) 58%, rgba(20, 20, 94, 0.3));
+}
+
+.auth-brand {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+}
+
+.auth-brand-icon {
+    display: grid;
+    flex: 0 0 29px;
+    width: 29px;
+    height: 29px;
+    place-items: center;
+    border-radius: 6px;
+    color: #fff;
+    background: linear-gradient(140deg, #8e6aff, #5545f0);
+}
+
+.auth-brand > span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.auth-brand strong {
+    font-size: 13px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.auth-brand strong span {
+    color: #8273ff;
+}
+
+.auth-brand small {
+    font-size: 8px;
+    line-height: 1.2;
+}
+
+.auth-brand-light small {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.auth-brand-light strong span {
+    color: #aaa0ff;
+}
+
+.auth-art-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 290px;
+    margin-top: 29px;
+}
+
+.auth-art-copy h1 {
+    margin: 0 0 9px;
+    font-size: 28px;
+    line-height: 1.04;
+    font-weight: 750;
+}
+
+.auth-art-copy h1 span {
+    color: #aaa0ff;
+}
+
+.auth-art-copy p {
+    max-width: 270px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.auth-highlights {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 13px;
+    width: 260px;
+    margin-top: 27px;
+}
+
+.auth-highlight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.auth-highlight-icon {
+    display: grid;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border-radius: 6px;
+    color: #fff;
+    background: rgba(111, 82, 248, 0.75);
+}
+
+.auth-highlight > span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.auth-highlight strong {
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+.auth-highlight small {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 9px;
+    line-height: 1.2;
+}
+
+.auth-robot {
+    position: absolute;
+    z-index: 0;
+    right: -3px;
+    bottom: 22px;
+    width: 166px;
+    height: 184px;
+    background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790482991/ChatGPT_Image_Sep_27_2026_09_50_59_AM.png);
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.auth-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 30px 40px;
+    color: #202235;
+    background: #fff;
+}
+
+.auth-brand-dark {
+    margin-bottom: 42px;
+}
+
+.auth-brand-dark small {
+    color: #73768a;
+}
+
+.auth-welcome {
+    margin-bottom: 25px;
+}
+
+.auth-eyebrow {
+    color: #6555df;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.auth-welcome h2 {
+    margin: 8px 0 6px;
+    color: #202235;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.auth-welcome p {
+    max-width: 290px;
+    margin: 0;
+    color: #73768a;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.auth-actions {
+    display: grid;
+    gap: 12px;
+}
+
+.auth-email-button,
+.auth-google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 44px;
+    padding: 0 35px;
+    border: 1px solid #e2e3ec;
+    border-radius: 7px;
+    color: #303247;
+    background: #fff;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.google-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.auth-email-button {
+    border-color: transparent;
+    color: #fff;
+    background: linear-gradient(105deg, #7953ed, #5448ed);
+    box-shadow: 0 5px 12px rgba(92, 75, 226, 0.18);
+}
+
+.auth-email-button:hover {
+    filter: brightness(1.05);
+}
+
+.auth-google-button:hover {
+    border-color: #c9c5ef;
+    background: #faf9ff;
+}
+
+.auth-email-button > svg:first-child {
+    position: absolute;
+    left: 15px;
+}
+
+.auth-button-arrow {
+    position: absolute;
+    right: 15px;
+    font-size: 12px;
+}
+
+.auth-google-button svg {
+    margin-right: 8px;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #85899b;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    height: 1px;
+    flex: 1;
+    background: #e7e8ee;
+    content: '';
+}
+
+.auth-signup {
+    margin: 24px 0 0;
+    color: #73768a;
+    font-size: 11px;
+    text-align: center;
+}
+
+.auth-signup a {
+    color: #5e50dd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-signup a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+    .auth-card {
+        grid-template-columns: 1fr;
+        width: min(460px, 100%);
+        min-height: 0;
+    }
+
+    .auth-art {
+        display: none;
+    }
+
+    .auth-panel {
+        padding: 30px clamp(22px, 7vw, 38px);
+    }
+
+    .auth-brand-dark {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 390px) {
+    .auth-screen {
+        padding: 16px 12px;
+    }
+
+    .auth-panel {
+        padding: 24px 18px;
+    }
+}

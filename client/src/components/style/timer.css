@@ -1,0 +1,36 @@
+.timer-ring {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-ring svg {
+    width: 68px;
+    height: 68px;
+    transform: rotate(-90deg);
+}
+
+.timer-ring circle {
+    fill: none;
+    stroke-width: 4;
+}
+
+.timer-trail {
+    stroke: #e7ebeb;
+}
+
+.timer-progress {
+    stroke: #0caf93;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.35s linear;
+}
+
+.timer-text {
+    position: absolute;
+    color: #ef6a79;
+    font-size: 18px;
+    font-weight: 500;
+}

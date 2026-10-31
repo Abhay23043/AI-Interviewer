@@ -1,0 +1,30 @@
+.history-page { min-height: 100vh; background: #f4f6fb; }
+.history-shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0 70px; }
+.history-header { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:28px; }
+.history-header span { color:#6960df; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; }
+.history-header h1 { margin:7px 0 7px; color:#172033; font-size:38px; }
+.history-header p { margin:0; color:#7a8397; }
+.history-header button,.history-empty button { min-height:44px; border:0; border-radius:9px; padding:0 18px; background:#6d62e8; color:white; font-weight:700; cursor:pointer; }
+.history-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+.history-card { padding:22px; border:1px solid #e5e8f1; border-radius:16px; background:white; box-shadow:0 12px 32px rgba(38,48,78,.06); }
+.history-card-top { display:flex; justify-content:space-between; align-items:center; }
+.history-icon { width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:#eeecff;color:#6256d8; }
+.history-status { border-radius:999px;padding:7px 10px;background:#eaf8f3;color:#16866d;font-size:12px;font-weight:800; }
+.history-card h2 { margin:18px 0 5px;color:#252d40;font-size:20px; }
+.history-mode { margin:0;color:#81899a;font-size:13px; }
+.history-mode span { margin:0 5px;color:#abb1bf; }
+.history-score-row { margin:18px 0; }
+.history-score-row > div:first-child { margin-bottom:8px;color:#172033; }
+.history-score-row strong { font-size:28px; }
+.history-score-row span { color:#8b93a2;font-size:13px; }
+.history-score-track { height:7px;border-radius:999px;background:#edf0f6;overflow:hidden; }
+.history-score-track div { height:100%;border-radius:999px;background:linear-gradient(90deg,#6256d8,#988cf0); }
+.history-card footer { border-top:1px solid #edf0f5;padding-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px; }
+.history-card footer > span { display:flex;align-items:center;gap:7px;color:#8a92a3;font-size:12px; }
+.history-card footer button { border:0;background:transparent;color:#6256d8;font-weight:800;display:flex;align-items:center;gap:7px;cursor:pointer; }
+.history-state,.history-empty { border:1px solid #e5e8f1;border-radius:16px;background:white;text-align:center;padding:50px 20px;color:#7b8497; }
+.history-error { color:#b42318;border-color:#f4c7c3;background:#fff8f7; }
+.history-empty svg { font-size:38px;color:#7770d9;margin-bottom:8px; }
+.history-empty h2 { color:#252d40;margin:10px 0 6px; }
+.history-empty p { margin:0 0 18px; }
+@media(max-width:760px){.history-shell{width:min(100% - 28px,1120px);padding-top:28px}.history-header{align-items:flex-start;flex-direction:column}.history-header h1{font-size:30px}.history-header button{width:100%}.history-grid{grid-template-columns:1fr}}

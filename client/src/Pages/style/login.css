@@ -1,0 +1,453 @@
+ h3,
+ p {
+     margin: 0;
+ }
+
+ .login-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     min-height: 100vh;
+     box-sizing: border-box;
+     padding: 24px 16px;
+     background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790486031/background_login.png);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+
+ }
+
+ .mainbox {
+     display: flex;
+     flex-direction: row;
+     width: min(800px, 100%);
+
+     /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); */
+ }
+
+ .box1 {
+     border-radius: 12px 0 0 12px;
+     background-color: rgb(255, 254, 254);
+     flex: 1 1 400px;
+     min-width: 0;
+     width: 400px;
+     min-height: 500px;
+     box-sizing: border-box;
+     display: flex;
+     justify-content: start;
+     flex-direction: column;
+     align-items: center;
+     gap: 1rem;
+
+     .heading {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 0.5rem;
+         margin-top: 40px;
+         margin-left: 0;
+
+         .heading-data {
+             font-size: medium;
+
+
+         }
+
+         .heading-icon {
+             background: #6d65fc;
+             background: linear-gradient(52deg, rgba(109, 101, 252, 1) 0%, rgba(152, 78, 237, 1) 100%);
+             padding: 10px;
+             border-radius: 8px;
+
+             .sparkle-icon {
+                 color: white;
+
+             }
+         }
+     }
+
+
+ }
+
+ .heading-title {
+     color: black;
+ }
+
+ .highlight {
+     color: #6d65fc;
+ }
+
+ .login-greet {
+     font-size: medium;
+ }
+
+ .welcoming {
+     color: black;
+ }
+
+ .login-para {
+     font-size: 15px;
+ }
+
+ .input-fields {
+     width: 90%;
+ }
+
+ .input-fields form {
+     width: 100%;
+ }
+
+ .input-group {
+     position: relative;
+     width: 100%;
+     margin-bottom: 10px;
+ }
+
+ .input-group input {
+     width: 100%;
+     height: 30px;
+
+     box-sizing: border-box;
+
+     border: 1px solid #ddd;
+     border-radius: 8px;
+
+     padding-left: 40px;
+     /* icon aur text ka gap */
+     padding-right: 40px;
+     /* right side space */
+
+     font-size: 14px;
+     outline: none;
+
+     background-color: white;
+ }
+
+ .input-group input:focus {
+     border-color: #6c5ce7;
+     box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+ }
+
+ .input-icon {
+     position: absolute;
+
+     left: 16px;
+     top: 50%;
+
+     transform: translateY(-50%);
+
+     font-size: 15px;
+     color: #6b7280;
+
+     pointer-events: none;
+ }
+
+ .password-icon {
+     position: absolute;
+
+     right: 16px;
+     top: 50%;
+
+     transform: translateY(-50%);
+
+     font-size: 15px;
+     color: #6b7280;
+
+     cursor: pointer;
+ }
+
+ .loginBtn {
+     width: 100%;
+ }
+
+ .login-btn {
+     position: relative;
+
+     width: 100%;
+     height: 38px;
+
+     border-radius: 8px;
+     border: none;
+
+     background: linear-gradient(314deg,
+             rgba(109, 101, 252, 1) 0%,
+             rgba(152, 78, 237, 1) 100%);
+
+     color: whitesmoke;
+
+     font-size: 15px;
+     font-weight: 500;
+
+     cursor: pointer;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     transition: all 0.2s ease;
+ }
+
+ .user-loading {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+
+     img {
+         width: 20px;
+         height: 20px;
+         filter: brightness(0) invert(1);
+     }
+
+ }
+
+ .loading-3dot {
+     width: 20px;
+     height: 20px;
+     display: block;
+     position: static;
+     
+
+ }
+
+
+
+ .login-icon {
+     position: absolute;
+
+     right: 16px;
+     top: 50%;
+
+     transform: translateY(-50%);
+
+     font-size: 15px;
+     color: white;
+
+     pointer-events: none;
+ }
+
+ .line6 {
+     display: flex;
+     justify-content: space-between;
+     text-align: center;
+     gap: 12px;
+     flex-wrap: wrap;
+     margin-bottom: 10px;
+
+     .forgotPass a {
+         text-decoration: none;
+         color: #6c5ce7;
+     }
+
+     .forgotPass a:hover {
+         color: #0707ec;
+     }
+
+ }
+
+ .keepmeSignin {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+ }
+
+ .line7 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 90%;
+
+ }
+
+ .otherlogin {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     justify-content: center;
+     text-align: center;
+
+ }
+
+ .otherlogin hr {
+     width: 90px;
+     flex: 1;
+     gap: 15px;
+     opacity: 0.2;
+     border: none;
+     border-top: 1px solid #040404;
+ }
+
+ .otherlogin span {
+     font-size: 13px;
+     color: #777;
+     white-space: nowrap;
+ }
+
+ .otherloginbtns {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 90%;
+ }
+
+ .googleBtn {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     gap: 0.5rem;
+     width: 100%;
+     box-sizing: border-box;
+     padding: 8px 16px;
+     background-color: white;
+     border-radius: 8px;
+     cursor: pointer;
+     border: 1px solid rgb(196, 194, 194);
+ }
+
+ .signup-data a {
+     text-decoration: none;
+     color: #6c5ce7;
+ }
+
+ .signup-data a:hover {
+     color: #0707ec;
+
+ }
+
+ .box2 {
+     border-radius: 0 12px 12px 0;
+     background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790482413/ChatGPT_Image_Sep_27_2026_09_39_16_AM.png);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     width: 400px;
+     height: 500px;
+     flex: 1 1 400px;
+     min-width: 0;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+ }
+
+
+ .headofBox2 {
+     display: flex;
+     position: absolute;
+     top: 60px;
+     left: 40px;
+     font-size: large;
+     gap: 0px;
+     flex-direction: column;
+
+     h2 {
+         margin: 0;
+         padding: 0;
+     }
+
+     .first-sent {
+         color: white;
+
+     }
+
+     .second-sent {
+         background: linear-gradient(90deg,
+                 #77a8f4,
+                 #8e5ffc);
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+
+     }
+
+     p {
+         font-size: 12px;
+         width: 90%;
+         color: rgb(206, 204, 204);
+     }
+
+ }
+
+ .boxes {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 20px;
+     color: white;
+     position: absolute;
+     left: 15px;
+     top: 200px;
+
+     .bblock {
+         display: flex;
+         justify-content: center;
+         align-items: start;
+         font-size: 8px;
+         gap: 0.5rem;
+     }
+
+     .b1 {
+
+         padding: 11px 13px;
+         border-radius: 8px;
+         background-color: rgb(69, 50, 168);
+     }
+
+     .bdata {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: start;
+
+         p {
+             color: rgb(206, 204, 204);
+         }
+     }
+
+     .b2 {
+
+         padding: 11px 13px;
+         border-radius: 8px;
+         background-color: rgb(55, 62, 150);
+     }
+
+     .b3 {
+         padding: 11px 13px;
+         border-radius: 8px;
+         background-color: rgb(55, 62, 150);
+     }
+
+ }
+
+ .robot {
+     width: 168px;
+     height: 182px;
+     position: absolute;
+     right: 10px;
+     bottom: 110px;
+     background-image: url(https://res.cloudinary.com/jlsrgasg/image/upload/v1790482991/ChatGPT_Image_Sep_27_2026_09_50_59_AM.png);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ @media screen and (max-width:700px) {
+     .mainbox {
+         width: min(400px, 100%);
+     }
+
+     .box2 {
+         display: none;
+     }
+
+     .box1 {
+         width: 100%;
+         border-radius: 12px;
+     }
+
+ }
