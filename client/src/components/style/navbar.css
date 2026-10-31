@@ -23,6 +23,15 @@
         margin-top: 10px;
     }
 
+    .main-logo-anchor {
+        color: black;
+        text-decoration: none;
+    }
+
+    .main-logo-anchor:hover {
+        text-decoration: underline;
+    }
+
     .main-logo {
         display: flex;
         align-items: center;
@@ -153,13 +162,14 @@
 
             }
 
-            a{
+            a {
                 display: flex;
                 margin-left: 5px;
                 text-decoration: none;
                 color: rgb(69, 11, 196);
             }
-            a:hover{
+
+            a:hover {
                 text-decoration: underline;
             }
         }
@@ -188,14 +198,15 @@
             color: rgba(227, 45, 45, 0.856);
             cursor: pointer;
         }
-        .logout-btn:hover{
+
+        .logout-btn:hover {
             color: red;
         }
     }
 
     @media screen and (max-width: 500px) {
 
-        .site-main-text{
+        .site-main-text {
             display: none;
         }
     }

@@ -15,17 +15,19 @@ const Navbar = () => {
     return (
         <div className='Navbar-body'>
             <motion.div
-                
+
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="navbar-container">
-                <div className="main-logo">
-                    <div className="logo-icon">
-                        <BsRobot size={18} />
+                <a href="/" className='main-logo-anchor'>
+                    <div className="main-logo">
+                        <div className="logo-icon">
+                            <BsRobot size={18} />
+                        </div>
+                        <h3 className='site-main-text'>InterviewWithAI</h3>
                     </div>
-                    <h3 className='site-main-text'>InterviewWithAI</h3>
-                </div>
+                </a>
                 <div className="page-navigations">
                     <div className="credits">
                         <button
