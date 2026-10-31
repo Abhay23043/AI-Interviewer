@@ -31,14 +31,10 @@ async function handleRegisterNewUserController(req, res) {
 
     //set token into cookie
     const token = genToken(user._id, user.email)
-    res.cookie("token", token, {
-        httpOnly: true,
-        secure: false
-    })
-
     res.status(201).json({
         message: "User registerd successfully",
-        user
+        user,
+        token
     })
 
 }
@@ -67,28 +63,16 @@ async function handleLoginUserController(req, res) {
     // )
 
     const token = genToken(user._id, user.email)
-    res.cookie("token", token, {
-        httpOnly: true,
-        secure: false
-    })
-
-
-
     res.status(201).json({
         message: "User login Successfully",
-        user
+        user,
+        token
     })
 
 }
 
 async function handleLogoutUserController(req, res) {
     try {
-
-        await res.clearCookie("token", {
-            httpOnly: true,
-            secure: false
-        });
-
         res.status(200).json({
             message: "Logout successfully"
         })

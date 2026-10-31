@@ -29,6 +29,8 @@ function Auth() {
             const name = response.user.displayName
             const email = response.user.email
             const result = await axios.post(`${ServerUrl}/api/auth/google`, { name, email }, { withCredentials: true })
+            localStorage.setItem("token", result.data.token)
+            axios.defaults.headers.common.Authorization = `Bearer ${result.data.token}`
             dispatch(setUserData(result.data.user))
             navigate('/')
 

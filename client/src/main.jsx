@@ -5,6 +5,12 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import store from './redux/store.js'
 import { Provider } from 'react-redux'
+import axios from 'axios'
+
+const token = localStorage.getItem("token")
+if (token) {
+  axios.defaults.headers.common.Authorization = `Bearer ${token}`
+}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

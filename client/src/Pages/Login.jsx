@@ -33,6 +33,8 @@ const Login = () => {
         setIsSubmitting(true)
         try {
             const result = await axios.post(`${ServerUrl}/api/auth/login`, { email, password }, { withCredentials: true })
+            localStorage.setItem("token", result.data.token)
+            axios.defaults.headers.common.Authorization = `Bearer ${result.data.token}`
             dispatch(setUserData(result.data.user))
             navigate('/')
 

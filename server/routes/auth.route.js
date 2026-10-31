@@ -1,6 +1,5 @@
 import { Router } from 'express'
 import controllers from '../controllers/auth.controller.js'
-import middlewares from '../middlewares/authUser.middleware.js'
 const authRouter = Router()
 
 /**
@@ -23,7 +22,7 @@ authRouter.post('/login', controllers.handleLoginUserController)
  * @access Private
  */
 
-authRouter.get('/logout', middlewares.authUser, controllers.handleLogoutUserController)
+authRouter.get('/logout', controllers.handleLogoutUserController)
 
 
 

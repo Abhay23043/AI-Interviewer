@@ -15,6 +15,8 @@ const Logout = () => {
     const handleLogoutFun = async () => {
         try {
             await axios.get(`${ServerUrl}/api/auth/logout`, { withCredentials: true })
+            localStorage.removeItem("token")
+            delete axios.defaults.headers.common.Authorization
             //Redux state clear
             dispatch(clearUserData())
             //Redirect
@@ -22,6 +24,10 @@ const Logout = () => {
 
         } catch (error) {
             console.log(error)
+            localStorage.removeItem("token")
+            delete axios.defaults.headers.common.Authorization
+            dispatch(clearUserData())
+            navigate('/')
         }
     }
 

@@ -1,5 +1,4 @@
 import express from 'express'
-import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import dotenv from 'dotenv'
 dotenv.config()
@@ -8,11 +7,21 @@ const app = express()
 //import database
 import connectDB from './config/database.js'
 //middlewares
-app.use(cookieParser());
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://ai-interviewer.abhayjaiswal457.workers.dev"
+];
+
 app.use(cors({
-    origin: process.env.FRONTEND_URI,
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true
-}))
+}));
 app.use(express.json());
 
 connectDB()

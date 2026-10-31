@@ -21,11 +21,18 @@ const App = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     const getUser = async () => {
+      const token = localStorage.getItem("token")
+      if (!token) {
+        dispatch(setUserData(null))
+        return
+      }
       try {
-        const result = await axios.get(`${ServerUrl}/api/user/getMe`, { withCredentials: true });
+        const result = await axios.get(`${ServerUrl}/api/user/getMe`);
         dispatch(setUserData(result.data))
       } catch (error) {
         console.log(error.message)
+        localStorage.removeItem("token")
+        delete axios.defaults.headers.common.Authorization
         dispatch(setUserData(null))
       }
     }
