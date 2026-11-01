@@ -7,6 +7,7 @@ import Register from '../src/Pages/Register.jsx'
 import Auth from '../src/Pages/Auth.jsx'
 import Logout from './Pages/Logout.jsx'
 import History from './Pages/History.jsx'
+import Forgot from './Pages/Forgot.jsx'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { setUserData } from './redux/userSlice.js'
@@ -56,7 +57,9 @@ const App = () => {
       <Route path='/history' element={<History />} />
       <Route path='/interview' element={<InterviewPage />} />
       <Route path='/pricing' element={<Pricing />} />
+      <Route path='/forgot' element={<Forgot />} />
       <Route path='/report/:id' element={<InterviewReport />} />
+
 
     </Routes>
   )
