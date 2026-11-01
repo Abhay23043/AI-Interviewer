@@ -204,8 +204,37 @@
         }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 600px) {
+        .navbar-container {
+            width: calc(100% - 24px);
+            padding: 4px 10px;
+            border-radius: 16px;
+        }
 
+        .main-logo {
+            gap: 8px;
+            margin-left: 0;
+        }
+
+        .page-navigations {
+            gap: 10px;
+        }
+
+        .user-data {
+            margin-right: 0;
+        }
+
+        .popupScreen {
+            right: -52px;
+            width: min(243px, calc(100vw - 32px));
+        }
+
+        .navigateToPricing {
+            padding: 9px 16px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
         .site-main-text {
             display: none;
         }

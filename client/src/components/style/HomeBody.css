@@ -4,12 +4,11 @@
 
 .body1 {
     display: flex;
-
-    flex: 1;
+    width: min(1120px, calc(100% - 32px));
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15px 0px;
+    margin: 15px auto 0;
 
     .heroSection1 span {
         display: flex;
@@ -36,12 +35,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.25rem);
+        line-height: 1.15;
+        text-align: center;
 
         .hero-highlight {
             background: #dafce6;
             color: #00a63e;
             border-radius: 35px;
-            padding: 10px;
+            padding: 8px 14px;
         }
 
 
@@ -55,9 +58,11 @@
     font-size: medium;
     display: flex;
     justify-content: center;
-    width: 533px;
+    width: min(533px, 100%);
     align-items: center;
     text-align: center;
+    line-height: 1.6;
+    margin: 16px auto 0;
 }
 
 .heroSection3 {
@@ -89,6 +94,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 100%;
     margin-bottom: 80px;
 }
 
@@ -99,8 +105,8 @@
     border: 2px solid rgb(199, 231, 199);
     border-radius: 24px;
     padding: 20px;
-    width: 320px;
-    max-width: 90%;
+    width: 100%;
+    max-width: 360px;
 }
 
 .steps-boxes:hover {
@@ -158,6 +164,7 @@
 .herosection5 {
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-bottom: 50px;
 
     .section2 {
@@ -176,8 +183,9 @@
 
 .grid-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+    width: 100%;
     margin-bottom: 50px;
 
     .grid-item {
@@ -216,6 +224,7 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    min-width: 0;
 
     .grid-img {
         width: 100%;
@@ -230,8 +239,10 @@
 }
 
 .gridImg {
-    width: 165px;
-    height: 170px;
+    width: min(165px, 100%);
+    height: auto;
+    max-height: 170px;
+    object-fit: contain;
 
 }
 
@@ -315,32 +326,117 @@
 
 
 
-/* mobile devices */
+@media screen and (max-width: 900px) {
+    .herosection4 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 12px;
+        row-gap: 48px;
+    }
 
-@media screen and (max-width: 500px) {
+    .steps-boxes {
+        justify-self: center;
+    }
+
+    .steps-boxes:last-child {
+        grid-column: 1 / -1;
+        width: min(100%, 360px);
+    }
+
+    .grid-full-data {
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .body1 {
+        width: calc(100% - 32px);
+    }
+
+    .heroSection1 span {
+        gap: 6px;
+    }
+
+    .heroSection1 .hero-para {
+        font-size: 12px;
+    }
+
     .heroSection2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 90%;
+        width: 100%;
+    }
 
-        p {
-            width: 90%;
+    .heroSection2 h1 {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
 
-        }
+    .heroSection2 h1 span {
+        max-width: 100%;
+    }
 
+    .heroSection2 .hero-highlight {
+        margin-top: 6px;
+    }
+
+    .hero-para1 {
+        font-size: 14px;
     }
 
     .heroSection3 {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin: 32px 0 48px;
+    }
 
+    .heroSection3 .hero-btn {
+        flex: 1;
+        max-width: 210px;
+        padding: 14px 18px;
     }
 
     .herosection4 {
-        display: flex;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 48px;
+        padding: 0 8px;
+    }
+
+    .steps-boxes:last-child {
+        grid-column: auto;
+    }
+
+    .herosection5 .section2 {
+        margin-bottom: 32px;
+    }
+
+    .grid-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .grid-full-data {
+        gap: 14px;
+    }
+
+    .grid-img,
+    .grid-data {
+        min-width: 0;
+    }
+
+    .grid-full-data2 {
+        padding: 0;
+    }
+
+    .gridImg2 {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .grid-full-data {
         flex-direction: column;
+    }
+
+    .grid-full-data2 {
+        flex-direction: row;
     }
 }

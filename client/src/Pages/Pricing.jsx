@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import { FaBolt, FaCheck, FaCrown, FaCreditCard, FaTimes, FaShieldAlt } from 'react-icons/fa'
+import { FaArrowLeft, FaBolt, FaCheck, FaCrown, FaCreditCard, FaTimes, FaShieldAlt } from 'react-icons/fa'
 import Navbar from '../components/Navbar'
 import { setUserData } from '../redux/userSlice'
+import { useNavigate } from 'react-router-dom'
 import './Pricing.css'
 
 const plans = [
@@ -38,6 +39,7 @@ const plans = [
 ]
 
 const Pricing = () => {
+  const navigate = useNavigate()
   const serverUrl = import.meta.env.VITE_API_URL
   const dispatch = useDispatch()
   const { userData } = useSelector((state) => state.user)
@@ -86,6 +88,10 @@ const Pricing = () => {
     <div className="pricing-page">
       <Navbar />
       <main className="pricing-shell">
+        <button className="pricing-back-button" type="button" onClick={() => navigate('/')}>
+          <FaArrowLeft aria-hidden="true" />
+          Back to Home
+        </button>
         <header className="pricing-header">
           <span>Simple Credit Packages</span>
           <h1>Choose Your Practice Plan</h1>
